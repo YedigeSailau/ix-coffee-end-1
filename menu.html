@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu | IX Coffee</title>
+<meta name="description" content="IX Coffee: small-batch coffee and pumpkin bakes, brewed for the cosiest, slightly spooky season.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Young+Serif&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav class="navbar navbar-expand-md sticky-top" aria-label="Main navigation">
+ <div class="container">
+  <a class="navbar-brand" href="index.html">IX C<span class="hat-o">o</span>ffee</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto">
+   <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link active" href="menu.html" aria-current="page">Menu &amp; pre-order</a></li><li class="nav-item"><a class="nav-link" href="loyalty.html">Regulars Club</a></li>
+  </ul></div>
+ </div>
+</nav>
+</header>
+<main>
+<section class="page-head"><div class="container"><h1 class="display-4">Menu &amp; pre-order</h1><p class="lead">Everything is made fresh today. Order ahead and skip the queue.</p></div></section>
+
+<section id="menu"><div class="container"><h2>Autumn menu</h2>
+<p class="menu-note">Prices in Kazakhstani tenge (₸). Ask us about dairy-free options.</p>
+<div class="menu-tools glass-form">
+ <div class="field"><span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></span><label class="visually-hidden" for="menuSearch">Search the menu</label><input class="form-control" type="search" id="menuSearch" maxlength="40" placeholder="Search drinks and bakes" autocomplete="off"></div>
+ <div class="chips" role="group" aria-label="Filter by type">
+  <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+  <button type="button" class="chip" data-filter="Hot" aria-pressed="false">Hot</button>
+  <button type="button" class="chip" data-filter="Iced" aria-pressed="false">Iced</button>
+  <button type="button" class="chip" data-filter="Bake" aria-pressed="false">Bake</button>
+ </div>
+ <div><label class="visually-hidden" for="menuSort">Sort the menu</label><select class="form-select" id="menuSort"><option value="default">Sort: featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name: A to Z</option></select></div>
+</div>
+<p class="menu-count" id="menuCount" role="status"></p>
+<div class="row g-4" id="menuGrid"></div>
+<div class="menu-empty" id="menuEmpty" hidden><div class="menu-empty-icon" aria-hidden="true">🦇</div><h3 class="h5">Nothing found</h3><p>No item matches your search. Try another word or clear the filters.</p><button type="button" class="btn btn-outline-bone" id="menuReset">Clear filters</button></div>
+</div></section>
+
+<section class="preorder" id="preorder"><div class="container"><div class="preorder-grid">
+
+ <div class="hero-panel">
+  <div class="hero-copy">
+   <p class="eyebrow">Pre-order</p>
+   <h2>Your cup is waiting</h2>
+   <p>Pick a drink and a pickup time, and we will keep it warm for you at the counter.</p>
+  </div>
+  <div class="hero-art">
+   <svg viewBox="0 0 600 450" preserveAspectRatio="xMidYMax meet" role="img" aria-label="A steaming orange coffee cup on a saucer between two lit candles, with coffee beans scattered on the table">
+    <defs>
+     <radialGradient id="tableGlow" cx="50%" cy="55%" r="50%"><stop offset="0" stop-color="#F28A1E" stop-opacity=".38"/><stop offset="1" stop-color="#F28A1E" stop-opacity="0"/></radialGradient>
+     <radialGradient id="flameGlow"><stop offset="0" stop-color="#ffb347" stop-opacity=".7"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="600" height="450" fill="url(#tableGlow)"/>
+    <rect y="396" width="600" height="54" fill="#140b08"/>
+    <path d="M0 396H600" stroke="#F28A1E" stroke-opacity=".5" stroke-width="2" stroke-dasharray="3 8" stroke-linecap="round"/>
+    <!-- candles -->
+    <circle cx="92" cy="232" r="70" fill="url(#flameGlow)"/>
+    <rect x="72" y="262" width="40" height="134" rx="6" fill="#EFE6D2"/>
+    <path d="M92 220c-12 14-9 32 0 38 9-6 12-24 0-38z" fill="#F28A1E"/>
+    <circle cx="508" cy="282" r="60" fill="url(#flameGlow)"/>
+    <rect x="490" y="310" width="36" height="86" rx="6" fill="#d8cdb4"/>
+    <path d="M508 272c-11 13-8 29 0 35 8-6 11-22 0-35z" fill="#F28A1E"/>
+    <!-- saucer and cup -->
+    <ellipse cx="300" cy="390" rx="172" ry="26" fill="#3A2140"/>
+    <ellipse cx="300" cy="386" rx="132" ry="17" fill="#2a1830"/>
+    <path d="M412 292h22a30 30 0 0 1 0 60h-40" fill="none" stroke="#F28A1E" stroke-width="15" stroke-linecap="round"/>
+    <path d="M190 266H410V304A82 82 0 0 1 328 386H272A82 82 0 0 1 190 304Z" fill="#F28A1E"/>
+    <path d="M206 290v14a66 66 0 0 0 26 52" fill="none" stroke="#ffb347" stroke-width="7" stroke-linecap="round" opacity=".7"/>
+    <ellipse cx="300" cy="266" rx="110" ry="16" fill="#3A2140"/>
+    <ellipse cx="300" cy="266" rx="98" ry="12" fill="#5a3320"/>
+    <path d="M300 258c14 0 24 4 24 8s-10 8-24 8-24-4-24-8 10-8 24-8z" fill="#EFE6D2" opacity=".85"/>
+    <!-- jack-o'-lantern face on the cup -->
+    <path d="M254 312l12-16 12 16zM322 312l12-16 12 16z" fill="#1F130E"/>
+    <path d="M262 338q38 26 76 0" fill="none" stroke="#1F130E" stroke-width="6" stroke-linecap="round"/>
+    <!-- steam -->
+    <path class="steam" d="M258 236c-14-18 14-28 0-50"/><path class="steam s2" d="M300 232c-14-18 14-28 0-50"/><path class="steam s3" d="M342 236c-14-18 14-28 0-50"/>
+    <!-- beans -->
+    <g fill="#4a2a1a" stroke="#1F130E" stroke-width="2"><g transform="translate(150 424) rotate(-25)"><ellipse rx="14" ry="9"/><path d="M-12 0q12-6 24 0" fill="none"/></g><g transform="translate(212 436) rotate(18)"><ellipse rx="14" ry="9"/><path d="M-12 0q12-6 24 0" fill="none"/></g><g transform="translate(400 430) rotate(-12)"><ellipse rx="14" ry="9"/><path d="M-12 0q12-6 24 0" fill="none"/></g><g transform="translate(452 418) rotate(35)"><ellipse rx="14" ry="9"/><path d="M-12 0q12-6 24 0" fill="none"/></g></g>
+   </svg>
+  </div>
+ </div>
+
+ <div class="glass-card">
+  <h3 class="h4 mb-1">Your order</h3>
+  <p class="glass-sub">Add items from the menu, then tell us who you are and when you will pick up.</p>
+  <form id="orderForm" class="glass-form" novalidate>
+   <div class="mb-4"><div class="form-label" id="cartLabel">Your cart</div>
+    <div class="cart" id="cart" aria-labelledby="cartLabel" aria-live="polite"></div>
+    <p class="field-error" id="cartError" role="alert" hidden>Add at least one item from the menu.</p></div>
+   <div class="mb-3"><label class="form-label" for="name">Your name</label>
+    <div class="field"><span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/></svg></span><input class="form-control" id="name" name="name" placeholder="e.g. Aigerim" autocomplete="given-name" aria-describedby="name-error"><div class="invalid-feedback" id="name-error"></div></div></div>
+   <div class="mb-3"><label class="form-label" for="email">Email</label>
+    <div class="field"><span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></span><input class="form-control" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" aria-describedby="email-error"><div class="invalid-feedback" id="email-error"></div></div></div>
+   <div class="row">
+    <div class="col-12 col-sm-7 mb-3"><label class="form-label" for="phone">Phone</label>
+     <div class="field"><span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 4h3l1.5 4-2 1.3a11 11 0 0 0 5.7 5.7L16 13l4 1.5v3a2 2 0 0 1-2.2 2A15.5 15.5 0 0 1 4.5 6.2 2 2 0 0 1 6.5 4z"/></svg></span><input class="form-control" type="tel" id="phone" name="phone" placeholder="+7 700 123 45 67" autocomplete="tel" aria-describedby="phone-error"><div class="invalid-feedback" id="phone-error"></div></div></div>
+    <div class="col-12 col-sm-5 mb-3"><label class="form-label" for="time">Pickup time</label>
+     <div class="field"><span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><input class="form-control" type="time" id="time" name="time" aria-describedby="time-error"><div class="invalid-feedback" id="time-error"></div></div></div>
+   </div>
+   <fieldset class="mb-3"><legend class="form-label fs-6">Size of drinks</legend>
+    <div class="size-grid">
+     <label class="size-card"><input class="size-input" type="radio" name="size" value="regular" checked>
+      <span class="size-body"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 22h16v5a8 8 0 0 1-8 8 8 8 0 0 1-8-8z"/><path d="M29 24h2.5a3 3 0 0 1 0 6H29"/><path d="M18 16v2M24 16v2"/></svg><span class="size-name">Regular</span><span class="size-meta">Base price</span></span></label>
+     <label class="size-card"><input class="size-input" type="radio" name="size" value="large">
+      <span class="size-body"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M9 17h24v11a12 12 0 0 1-12 12 12 12 0 0 1-12-12z"/><path d="M33 20h3a4.5 4.5 0 0 1 0 9h-3"/><path d="M16 8v4M22 8v4M28 8v4"/></svg><span class="size-name">Large</span><span class="size-meta">+300 ₸ per drink</span></span></label>
+    </div>
+   </fieldset>
+   <div class="mb-4"><label class="form-label" for="note">Note (optional)</label>
+    <div class="field"><span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20l1-4L16.5 4.5a2 2 0 0 1 3 3L8 19z"/><path d="M14.5 6.5l3 3"/></svg></span><textarea class="form-control" id="note" name="note" rows="2" placeholder="Oat milk, no sugar…" aria-describedby="note-error"></textarea><div class="invalid-feedback" id="note-error"></div></div></div>
+   <button class="btn btn-pumpkin btn-glow w-100" type="submit">Place pre-order</button>
+   <p id="formMsg" class="form-msg mt-3 mb-0" role="status"></p>
+  </form>
+ </div>
+
+</div></div></section>
+
+<a class="cart-fab" id="cartFab" href="#preorder"><span aria-hidden="true">🛒</span><span id="cartFabText">Your order</span></a>
+</main>
+<footer>
+ <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+  <p class="mb-0"><strong>IX Coffee</strong> · Turan Ave 39/3, Astana, open daily 8:00–22:00</p>
+  <p class="mb-0 small">Student project. Emoji and fonts: Google Fonts (Young Serif, Figtree). Cup illustration drawn by the author. Pre-order scene illustration and form styling created with the help of Claude (AI). Code written with the help of Claude (AI). Libraries: Bootstrap 5.3, jQuery 3.7.</p>
+ </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/form.js"></script>
+<script src="js/effects.js"></script>
+</body>
+</html>

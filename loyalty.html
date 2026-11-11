@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regulars Club | IX Coffee</title>
+<meta name="description" content="IX Coffee Regulars Club: Fast Track, your own secret-ingredient drink and a personal cup on the shelf for our most loyal guests.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Young+Serif&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav class="navbar navbar-expand-md sticky-top" aria-label="Main navigation">
+ <div class="container">
+  <a class="navbar-brand" href="index.html">IX C<span class="hat-o">o</span>ffee</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto">
+   <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="menu.html">Menu &amp; pre-order</a></li><li class="nav-item"><a class="nav-link active" href="loyalty.html" aria-current="page">Regulars Club</a></li>
+  </ul></div>
+ </div>
+</nav>
+</header>
+<main>
+<section class="page-head"><div class="container"><p class="eyebrow">Loyalty programme</p><h1 class="display-4">The Regulars Club</h1><p class="lead">The more you visit, the more the café becomes yours. Three rewards you cannot buy, only earn.</p><a href="#join" class="btn btn-pumpkin me-2 mb-2">Join the club</a><a href="#calc" class="btn btn-outline-bone me-2 mb-2">Check my status</a><a href="#card" class="btn btn-outline-bone mb-2">Design my card</a></div></section>
+
+<section class="band" id="perks"><div class="container"><h2>Rewards for our most loyal guests</h2><p class="mb-4">Earn pumpkin points with every order (1 point per 100 ₸). Points are counted per season.</p>
+<div class="row g-4">
+ <div class="col-12 col-lg-4"><article class="perk"><div class="perk-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M6 24h26"/><path d="M24 14l10 10-10 10"/><path d="M40 12v24"/></svg></div><span class="perk-badge">Top 10% of guests</span><h3 class="h4">Fast Track</h3><p>The 10% most regular guests in the app get priority ordering in rush hour. Your drink skips the queue and goes straight to the barista.</p></article></div>
+ <div class="col-12 col-lg-4"><article class="perk"><div class="perk-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M16 6h16"/><path d="M20 6v12L9 38a4 4 0 0 0 3.5 6h23a4 4 0 0 0 3.5-6L28 18V6"/><path d="M14 32h20"/></svg></div><span class="perk-badge">High status</span><h3 class="h4">Your Secret Ingredient</h3><p>Invent your own signature drink together with the head barista. It joins the seasonal menu under your name for a whole month.</p></article></div>
+ <div class="col-12 col-lg-4"><article class="perk"><div class="perk-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M10 18h24v10a10 10 0 0 1-10 10h-4a10 10 0 0 1-10-10z"/><path d="M34 21h3a4 4 0 0 1 0 9h-4"/><path d="M6 44h36"/></svg></div><span class="perk-badge">Most loyal guests</span><h3 class="h4">Personal Cup on the Shelf</h3><p>A ceramic cup with your name on it waits on our special shelf in the café. It is served only to you.</p></article></div>
+</div></div></section>
+
+<section id="levels"><div class="container"><h2>Four levels, one ladder</h2><p class="mb-4">Points reset every season, so everyone can climb again.</p>
+<ol class="ladder list-unstyled row g-3 mb-0">
+ <li class="col-12 col-md-6 col-lg-3"><div class="level" data-level="0"><span class="level-no">1</span><h3 class="h5">Guest</h3><p class="level-pts">from 0 points</p><p class="mb-0">Join the club and start collecting points.</p></div></li>
+ <li class="col-12 col-md-6 col-lg-3"><div class="level" data-level="1"><span class="level-no">2</span><h3 class="h5">Regular</h3><p class="level-pts">from 100 points</p><p class="mb-0">A free drink on your birthday week.</p></div></li>
+ <li class="col-12 col-md-6 col-lg-3"><div class="level" data-level="2"><span class="level-no">3</span><h3 class="h5">Insider</h3><p class="level-pts">from 400 points</p><p class="mb-0">Your Secret Ingredient: create a drink with the head barista.</p></div></li>
+ <li class="col-12 col-md-6 col-lg-3"><div class="level level-top" data-level="3"><span class="level-no">4</span><h3 class="h5">Legend</h3><p class="level-pts">top 10% · from 1 000 points</p><p class="mb-0">Fast Track and your Personal Cup, plus everything above.</p></div></li>
+</ol></div></section>
+
+<section class="band" id="calc"><div class="container"><div class="row g-4 align-items-start">
+ <div class="col-12 col-lg-5"><h2>Where would you land?</h2><p>Move the sliders to see how many points you collect in one autumn season and which level you reach.</p>
+  <form class="glass-form calc-form" onsubmit="return false" aria-label="Status calculator">
+   <div class="mb-4"><label class="form-label d-flex justify-content-between" for="visits">Visits per week <output id="visitsOut" for="visits">3</output></label><input type="range" class="form-range" id="visits" min="0" max="7" step="1" value="3"></div>
+   <div class="mb-0"><label class="form-label d-flex justify-content-between" for="check">Average order <output id="checkOut" for="check">2 000 ₸</output></label><input type="range" class="form-range" id="check" min="1000" max="5000" step="100" value="2000"></div>
+  </form></div>
+ <div class="col-12 col-lg-7"><div class="status-card glass-card" aria-live="polite">
+   <p class="eyebrow mb-1">Your level this season</p>
+   <h3 class="status-name" id="statusName">Insider</h3>
+   <p class="mb-3"><strong id="statusPoints">0</strong> points · <span id="statusNext"></span></p>
+   <div class="progress status-progress" role="progressbar" aria-label="Progress to the next level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar" id="statusBar" style="width:0%"></div></div>
+   <ul class="status-perks list-unstyled mt-4 mb-0" id="statusPerks"></ul>
+  </div></div>
+</div></div></section>
+
+<section id="shelf"><div class="container"><h2>The Personal Cup shelf</h2><p class="mb-4">Choose a cup to see who it belongs to. Names are examples. The empty cup is waiting for you.</p>
+ <div class="row g-4 align-items-stretch">
+  <div class="col-12 col-lg-7"><div class="shelf-unit" id="shelfUnit" role="list" aria-label="Personal cups"></div></div>
+  <div class="col-12 col-lg-5"><aside class="glass-card cup-card" aria-live="polite">
+    <div class="cup-card-top"><div class="cup-big" id="cupBig" aria-hidden="true"></div><div><p class="eyebrow mb-1" id="cupLevel">Legend</p><h3 class="h2 mb-0" id="cupTitle">Aigerim</h3></div></div>
+    <ul class="cup-facts list-unstyled mb-0" id="cupFacts"></ul>
+    <div class="engrave glass-form"><label class="form-label" for="engrave">Try your name on the empty cup</label><div class="field"><span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20l1-4L16.5 4.5a2 2 0 0 1 3 3L8 19z"/><path d="M14.5 6.5l3 3"/></svg></span><input class="form-control" id="engrave" type="text" maxlength="12" placeholder="Your name" autocomplete="off"></div></div>
+  </aside></div>
+ </div></div></section>
+
+<section class="band-orange" id="guest-drink"><div class="container"><div class="row g-4 align-items-center">
+ <div class="col-12 col-lg-6"><p class="eyebrow eyebrow-dark">Secret Ingredient · November</p><h2>Aigerim’s Ghost Latte</h2><p>Example of a guest drink: white chocolate, a pinch of cardamom and a black-sesame web, invented by a Legend guest together with our head barista. It stays on the seasonal menu for one month with her name on the cup holder.</p><a href="#join" class="btn btn-dark rounded-pill px-4">Earn your own</a></div>
+ <div class="col-12 col-lg-6"><ol class="steps list-unstyled mb-0">
+  <li><span>1</span> Reach the Insider level (400 points).</li>
+  <li><span>2</span> Book a tasting session with the head barista.</li>
+  <li><span>3</span> Pick a base, a syrup and your secret ingredient.</li>
+  <li><span>4</span> Your drink goes on the menu under your name for a month.</li>
+ </ol></div>
+</div></div></section>
+
+<section id="card"><div class="container"><div class="row g-4 align-items-center">
+ <div class="col-12 col-lg-6 order-2 order-lg-1"><div class="glass-card glass-form">
+  <p class="eyebrow mb-1">Card builder</p><h2>Design your club card</h2><p class="glass-sub">Type a name or a nickname, pick a level and a style. This is the card you show at the counter.</p>
+  <form id="cardForm" novalidate>
+   <div class="mb-3"><label class="form-label" for="cname">Name or nickname</label><div class="field"><span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><input class="form-control" id="cname" type="text" maxlength="16" placeholder="Aigerim or coffee_ghost" autocomplete="off" aria-describedby="cname-error"><div class="invalid-feedback" id="cname-error"></div></div></div>
+   <fieldset class="mb-3"><legend class="form-label fs-6">Level and discount</legend><div class="opt-row" id="optLevel"></div></fieldset>
+   <fieldset class="mb-3"><legend class="form-label fs-6">Colour</legend><div class="opt-row" id="optTheme"></div></fieldset>
+   <fieldset class="mb-4"><legend class="form-label fs-6">Sticker</legend><div class="opt-row" id="optSticker"></div></fieldset>
+   <div class="d-flex flex-wrap gap-2"><button class="btn btn-pumpkin btn-glow flex-grow-1" type="button" id="cardDownload">Download card (PNG)</button><button class="btn btn-outline-bone flex-grow-1" type="button" id="cardJoin">Use this name to join</button></div>
+   <p id="cardMsg" class="form-msg mt-3 mb-0" role="status"></p>
+  </form>
+  <p class="small mt-3 mb-0 glass-sub">Discounts are examples for this student project.</p>
+ </div></div>
+ <div class="col-12 col-lg-6 order-1 order-lg-2"><div class="card-stage"><article class="club-card" id="clubCard" role="img" aria-label="Club card preview">
+   <div class="cc-top"><span class="cc-brand">IX C<span class="hat-o">o</span>ffee</span><span class="cc-sticker" id="ccSticker" aria-hidden="true">🎃</span></div>
+   <div class="cc-mid"><p class="cc-name" id="ccName">Your name</p><p class="cc-level" id="ccLevel">Insider</p></div>
+   <div class="cc-deal"><span class="cc-pct" id="ccPct">−10%</span><span class="cc-pct-note">on every order<br><small id="ccPerk"></small></span></div>
+   <div class="cc-foot"><p class="cc-pickup"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Pick up at the nearest IX Coffee point<small>Turan Ave 39/3, Astana · daily 8:00–22:00</small></span></p><span class="cc-no" id="ccNo">IX-0000</span></div>
+  </article></div></div>
+</div></div></section>
+
+<section class="preorder" id="join"><div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-6">
+ <div class="glass-card glass-form"><p class="eyebrow mb-1">Free to join</p><h2>Join the Regulars Club</h2><p class="glass-sub">Leave your details and we will create your club card. Your first points start with your next order.</p>
+  <form id="joinForm" novalidate>
+   <div class="mb-3"><label class="form-label" for="jname">Name</label><div class="field"><span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><input class="form-control" id="jname" name="name" type="text" placeholder="Your name" autocomplete="name" aria-describedby="jname-error"><div class="invalid-feedback" id="jname-error"></div></div></div>
+   <div class="mb-3"><label class="form-label" for="jemail">Email</label><div class="field"><span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><input class="form-control" id="jemail" name="email" type="email" placeholder="you@example.com" autocomplete="email" aria-describedby="jemail-error"><div class="invalid-feedback" id="jemail-error"></div></div></div>
+   <div class="form-check mb-4"><input class="form-check-input" type="checkbox" id="jagree" aria-describedby="jagree-error"><label class="form-check-label" for="jagree">I agree to receive club news</label><div class="field-error" id="jagree-error" hidden></div></div>
+   <button class="btn btn-pumpkin btn-glow w-100" type="submit">Get my club card</button>
+   <p id="joinMsg" class="form-msg mt-3 mb-0" role="status"></p>
+  </form></div>
+</div></div></div></section>
+</main>
+<footer>
+ <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+  <p class="mb-0"><strong>IX Coffee</strong> · Turan Ave 39/3, Astana, open daily 8:00–22:00</p>
+  <p class="mb-0 small">Student project. Emoji and fonts: Google Fonts (Young Serif, Figtree). Icons and illustrations drawn in SVG. Loyalty page created with the help of Claude (AI). Libraries: Bootstrap 5.3, jQuery 3.7.</p>
+ </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/loyalty.js"></script>
+<script src="js/effects.js"></script>
+</body>
+</html>
